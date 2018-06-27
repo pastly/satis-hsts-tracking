@@ -1,0 +1,27 @@
+body {
+	font-family: Georgia,"Times New Roman",Times,serif;
+	background-color: #ccc;
+}
+
+#bodycontent {
+	border: 5px solid #888;
+	background-color: #eee;
+	max-width: 800px;
+	margin: auto;
+	padding: 20px;
+}
+
+.note {
+	border: 5px solid rgba(200, 200, 0, 0.5);
+	background-color: rgba(255, 255, 0, 0.5);
+	padding: 10px;
+}
+
+.note::before {
+	content: "Note: ";
+}
+
+object {
+	width: 800px;
+	height: 100px;
+}

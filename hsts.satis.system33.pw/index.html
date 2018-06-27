@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HSTS SATIS Demo</title>
+	<link href=common.css rel=stylesheet type=text/css />
+	<link href=style.css rel=stylesheet type=text/css />
+	<meta charset=utf-8 />
+</head>
+<body>
+<div id=bodycontent>
+
+<h1>HSTS SATIS Demo</h1>
+
+<p class=note>
+No state is ever kept on the server, and once you allow us, no state will be
+kept in your browser for more than 30 minutes after your last visit.
+</p>
+
+<p>
+<strong>--> Click <a href=https://01.hsts.satis.system33.pw/trackme>here</a> <--</strong>
+if you would like us to start tracking the last time you visited this website.
+This demo works without JavaScript and primarily demonstrates we can give
+different content to users based only on the contents of their HSTS state.
+</p>
+
+<object type=text/html data=http://01.hsts.satis.system33.pw/30m-check></object>
+<object type=text/html data=http://02.hsts.satis.system33.pw/15m-check></object>
+
+
+<img src='http://03.hsts.satis.system33.pw/chrome-check-img' />
+<p>
+Are you using Chrome? You can view your HSTS state information!
+See <a href='https://03.hsts.satis.system33.pw/chrome-set'>here</a>.
+</p>
+<object type=text/html data=http://03.hsts.satis.system33.pw/chrome-check-text></object>
+
+
+<!--
+<object type=text/html data=http://04.hsts.satis.system33.pw/firefox-check></object>
+<object type=text/html data=http://05.hsts.satis.system33.pw/torbrowser-check></object>
+-->
+
+<img src='http://06.hsts.satis.system33.pw/safari-check-img' />
+<p>
+Are you using Safari? You can view your HSTS information using
+<a href='https://06.hsts.satis.system33.pw/plist-parse.py'>a script</a>
+that parses
+<a href='https://06.hsts.satis.system33.pw/safari-set'>this file</a>.
+</p>
+<object type=text/html data=http://06.hsts.satis.system33.pw/safari-check-text></object>
+
+<img src=firefox.png />
+<p> Are you using Firefox? You can view your HSTS information by opening
+<code>SiteSecurityServiceState.txt</code> in your profile directory. Firefox
+seems to keep HSTS information in memory and only update this file when
+closing.  </p>
+
+<img src=torbrowser.png />
+<p> Are you using Tor Browser? Tor Browser also keeps HSTS information in
+memory and we found a <code>SiteSecurityServiceState.txt</code> file in its
+profile directory. However, it never seemed to update the file and after
+deleting the file, we couldn't convince Tor Browser to recreate it. Search for
+HSTS in <a href='https://www.torproject.org/projects/torbrowser/design/'>Tor
+Browser's design document</a> for information on what they have done to protect
+against HSTS attacks.  </p>
+
+<hr>
+
+<p> Here are links to other things that are separate from the above demo.</p>
+
+<ul>
+<li><a href='https://pastly.xyz'>pastly.xyz</a></li>
+</ul>
+
+</div> <!-- bodycontent -->
+</body>
+</html>

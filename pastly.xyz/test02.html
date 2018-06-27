@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href=https://08.hsts.satis.system33.pw/tracking.css rel=stylesheet type=text/css />
+	<meta charset=utf-8 />
+</head>
+<body>
+<h1>Test for tracking via CSS resource</h1>
+
+<p> In the process of loading this page, an attempt was made to load CSS from a
+different domain. That domain redirected to another domain, which finally
+redirects to a resource on this domain. The important bit is that the two stops
+along the way try to set HSTS state in your browser for their domains. They
+both set a small <code>max-age</code> of 5 minutes because we aren't actually
+interested in tracking you.  </p>
+
+<p> In most browsers, the two domains along the way will be allowed to store
+their HSTS state in your browser. Safari won't; but Chrome will, Firfox will,
+and Tor Browser will until you close your browser.
+</p>
+
+<p> The two domains are <code>08.hsts.satis.system33.pw</code> and
+<code>09.hsts.satis.system33.pw</code>.  </p>
+
+<p> You can check for their existence in your HSTS state in Chrome by visiting
+<code>chrome://net-internals/#hsts</code> and typing them in to the <em>Query
+HSTS/PKP domain</em> box. </p>
+
+<p> You can do so in Firefox by closing your browser and greping for
+<code>system33</code> in the file named
+<code>SiteSecurityServiceState.txt</code> in your profile directory.</p>
+
+<p> You can do so in Safari by using
+<a href=http://hsts.satis.system33.pw/plist-parse.py>a script</a> to parse
+<code>~/Library/Cookies/HSTS.plist</code> and greping for <code>system33</code>.
+</p>
+
+<h2>Implications</h2>
+<p> This can be used -- for example -- by an ad network or a large CDN to track
+a user across websites. </p>
+
+</body>
+</html>
