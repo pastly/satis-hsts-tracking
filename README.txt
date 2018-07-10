@@ -5,6 +5,11 @@ hsts.satis.system33.pw/
 
   The website files for the hsts.satis.system33.pw part of this demo.
 
+hsts.satis.system33.pw/redirects/
+
+  A bunch of files that -- when combined with appropriate nginx rules -- can
+  help one determine how many redirects their browser allows in a chain.
+
 pastly.xyz/
 
   The website files for the pastly.xyz part of this demo.
