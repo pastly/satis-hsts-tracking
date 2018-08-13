@@ -55,3 +55,21 @@ At 0:48: The user finds where to clear more browsing data, verifies that
 
 At 0:57: The user reloads the page and finds he is no longer being tracked
 because HSTS state is cleared when "Cached images and files" are cleared.
+
+                Redirect Chain Chrome and Safari
+                -------------------------------
+
+This video should play when opened in Firefox and Chrome.
+
+This video demonstrates how Chrome and Safari handle a chain of HTTP 302
+redirects. Both browsers navigate the chain very quickly, adding little
+noticable delay to page load time.
+
+Differences:
+
+- Chrome does not display intermediate pages in the chain of redirects and
+  makes it through 19 redirects before giving up.
+
+- Safari displays some of the intermediate pages (if "Show full website
+  address" is checked on Safari's Preferences -> Advanced page) and makes it
+  through 16 redirects before giving up.
